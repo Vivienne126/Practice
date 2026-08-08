@@ -5,22 +5,26 @@ def countdown(num):
         print("TIMES UP!")
         return
     print(num)
-    countdown(num-1)
+    return countdown(num-1)
+    
 
 num=int(input("Enter a number"))
-print(countdown(num))
+countdown(num)
 
 def countup(num):
     if num>=10:
         print("Reached 10!")
         return
     print(num)
-    num=num+1
+    return countup(num+1)
+
+countup(1)
+
 
 def factorial(num):
     if num==0 or num==1:
         return 1
-    num*factorial(num-1)
+    return num*factorial(num-1)
 
 n=int(input("Enter a number"))
 print(f"Factorial of {n}: {factorial(n)}")
